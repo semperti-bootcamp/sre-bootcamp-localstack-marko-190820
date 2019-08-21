@@ -1,4 +1,4 @@
-# Creacion de Virtaul Machine en RHEV
+# Creacion de Virtual Machine en RHEV
  Especificaciones:
  - 20GB HDD
  - 2GB RAM
