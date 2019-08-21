@@ -22,7 +22,7 @@
 - Maven 3.6
 - terraform
 - abrir los puertos :
-  sudo firewall-cmd --zone=public --add-port=4500-46000/tcp --permanent
-  sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent
+   - sudo firewall-cmd --zone=public --add-port=4500-46000/tcp --permanent
+   - sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent
 
 Usuario creado non-root: localstack
