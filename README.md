@@ -6,6 +6,26 @@
  - S.O: Centos 7
  - IP address: 10.252.7.160
  
+ ## Instalacion de Terraform y Ansible
+
+ En vista de que se usaran scripts de Terraform para el provisioning de localstack y utilizaremos Ansible para la parte de   instalacion, es necesario instalar estas dos herramientas.
+ 
+ ### Instalacion Terraform:
+  - sudo yum install wget unzip
+  - wget https://releases.hashicorp.com/terraform/0.11.13/terraform_0.11.13_linux_amd64.zip
+  - sudo unzip ./terraform_0.11.13_linux_amd64.zip -d /usr/local/bin/
+  - terraform -v
+
+### Instalacion de Ansible:
+
+  - sudo yum install epel-release
+  - sudo yum install ansible
+### Configuring Ansible Hosts:
+  - sudo vi /etc/ansible/hosts
+  - Agregar la siguiente linea 
+    [group_name]
+    alias ansible_ssh_host=your_server_ip
+ 
  ## Instalacion de Localstack (non-docker mode) Hecho con script de Ansible
   
  Dependencias: 
@@ -26,22 +46,8 @@
 
 ##### Usuario creado non-root: localstack
 
-## Instalacion de Terraform y Ansible
+#### Error 01 encontrado:
 
- En vista de que se usaran scripts de Terraform para el provisioning de localstack y utilizaremos Ansible para la parte de   instalacion, es necesario instalar estas dos herramientas.
- 
- ### Instalacion Terraform:
-  - sudo yum install wget unzip
-  - wget https://releases.hashicorp.com/terraform/0.11.13/terraform_0.11.13_linux_amd64.zip
-  - sudo unzip ./terraform_0.11.13_linux_amd64.zip -d /usr/local/bin/
-  - terraform -v
 
-### Instalacion de Ansible:
 
-  - sudo yum install epel-release
-  - sudo yum install ansible
-### Configuring Ansible Hosts:
-  - sudo vi /etc/ansible/hosts
-  - Agregar la siguiente linea 
-    [group_name]
-    alias ansible_ssh_host=your_server_ip
+
