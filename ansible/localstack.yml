@@ -1,0 +1,74 @@
+---
+- hosts: bc-marko
+
+  tasks:
+
+  - name: Instalacion de Dependencias
+    yum:
+      name: ['gcc', 'python-devel', 'python-pip', 'python', 'epel-release', 'npm', 'git', 'java-1.8.0-openjdk', 'java-1.8.0-openjdk-devel']
+      state: present
+
+  - name: Clone GitHub
+    git:
+      repo: 'https://github.com/localstack/localstack.git'
+      dest: '/home/localstack/'
+
+  - name: Privilegios pip
+    pip:
+      name: [ 'pip', 'setuptools'] 
+      state: latest
+      extra_args: --user
+
+  - name: pip sin privilegios
+    pip:
+      name: pip
+      state: latest
+      extra_args: --user
+    become: yes
+    become_user: 'localstack'
+
+  - name: Instalar localstack
+    pip:
+      name: localstack[full]
+      state: latest
+      extra_args: --user 
+
+
+  - name: LocalStack Web
+    systemd:
+      name: localstack-web
+      state: started
+      enabled: true
+
+  - name: Check port LocalStack S3
+    wait_for:
+      host: localhost
+      port: 4572
+      delay: 30
+      timeout: 60
+
+  - name: Check port LocalStack Web
+    wait_for:
+      host: localhost
+      port: 8080
+      delay: 30
+      timeout: 60
+
+  - name: Habilitar LocalStack Web Port
+    firewalld:
+      port: 8080/tcp
+      permanent: yes
+      state: enabled
+      
+  - name: Habilitar LocalStack Infra Ports
+    firewalld:
+      port: 4500-4600/tcp
+      permanent: yes
+      state: enabled
+
+  - name: Test
+    wait_for:
+      host: "bc-marko"
+      port: 8080
+      delay: 30
+      timeout: 60
