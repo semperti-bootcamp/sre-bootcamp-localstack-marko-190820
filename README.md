@@ -53,7 +53,7 @@ localstack web start
 
 #### Error 01 encontrado:
 
-![] (https://github.com/semperti-bootcamp/sre-bootcamp-localstack-marko-190820/blob/A1/imagenes/erro01.png)
+![](https://github.com/semperti-bootcamp/sre-bootcamp-localstack-marko-190820/blob/A1/imagenes/erro01.png)
 
 
 
