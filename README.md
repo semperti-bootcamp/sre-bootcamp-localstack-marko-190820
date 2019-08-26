@@ -2,5 +2,8 @@
 
 vamos hasta el directorio donde tenemos el script s3 de terraform y ejecutamos los siguientes comandos:
 
+cd s3/s3.tf
+
 terraform init
-terraform s3.tf apply
+
+terraform apply
