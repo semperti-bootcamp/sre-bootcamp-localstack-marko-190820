@@ -60,6 +60,16 @@ localstack web start
 
 sudo pip3 install --upgrade pip setuptools wheel
 
+Luego de dar solucion al error encontrado ejecutamos nuevamente los comandos:
+
+localstack start --host
+
+![]()
 
 
+
+
+localstack web start
+
+![]()
 
