@@ -8,7 +8,7 @@ dynamodb = boto3.resource('dynamodb', region_name='us-east-1, endpoint=localhost
  
 table = dynamodb.Table('talks')
  
-rootdir = "d:\\projects\\image-annotation\\data\\talks\\json\\1"
+rootdir = "/home/localstack//localstack//"
 for subdir, dirs, files in os.walk(rootdir):
   for file in files:
     selected = subdir + "\\" + file
