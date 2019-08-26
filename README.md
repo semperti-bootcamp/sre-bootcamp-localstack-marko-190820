@@ -55,5 +55,10 @@ localstack web start
 
 ![](https://github.com/semperti-bootcamp/sre-bootcamp-localstack-marko-190820/blob/A1/imagenes/erro01.png)
 
+### Solucion:
+
+sudo pip3 install --upgrade pip setuptools wheel
+
+
 
 
