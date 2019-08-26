@@ -11,7 +11,7 @@ General
   
 Crear VM con LocalStack	
 
-        1.0	Seguir los pasos en https://github.com/localstack/localstack
+	1.0	Seguir los pasos en https://github.com/localstack/localstack
 	1.1	La VM no debe tener más que 2 cores y 2 GB de RAM, debe tener CentOS7 & debe ser accesible por VPN
 	1.2	Crear un script de Ansible para configurar LocalStack [no la alternativa de Docker]
 	1.3	Proveer la IP al portal HTTP de acceso a LocalStack [debe ser accesible por VPN]
@@ -26,7 +26,7 @@ S3 & DynamoDB
 
 SQS & Lambda	
 
-        3.0	Crear un script de Terraform para provisionar SQS & Lambda
+	3.0	Crear un script de Terraform para provisionar SQS & Lambda
 	
 	3.1	Generar una función de Lambda que importa un Python script que genera un echo de un payload de una consulta                   HTTP
 	3.2	Generar un script para enviar un mensaje usando una Queue en SQS para que un usuario pueda configurar un 
@@ -36,5 +36,5 @@ SQS & Lambda
 
 Documento de Implementación	
 
-        4.0	Generar un documento con diagramas de alto y bajo nivel explicando cómo puede ser incluido en un circuito de                 CI/CD
+	4.0	Generar un documento con diagramas de alto y bajo nivel explicando cómo puede ser incluido en un circuito de                 CI/CD
 	4.3	Explicar cuidadosamente cómo pueden ser explotados estos servicios y sus limitaciones
