@@ -48,7 +48,8 @@
 
 Corremos el comando con el usuario non-root: 
 
-localstack start --host
+localstack start --host 
+
 localstack web start
 
 #### Error 01 encontrado:
