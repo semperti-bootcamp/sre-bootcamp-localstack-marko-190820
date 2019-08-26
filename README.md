@@ -62,14 +62,22 @@ sudo pip3 install --upgrade pip setuptools wheel
 
 Luego de dar solucion al error encontrado ejecutamos nuevamente los comandos:
 
+En el directorio de localstack podemos ejecutar para realizar unittest el siguiente comando:
+
+make infra
+
+![](https://github.com/semperti-bootcamp/sre-bootcamp-localstack-marko-190820/blob/A1/imagenes/testlocalstack.png)
+
+
+
 localstack start --host
 
-![]()
+![](https://github.com/semperti-bootcamp/sre-bootcamp-localstack-marko-190820/blob/A1/imagenes/localstackstart.png)
 
 
 
 
 localstack web start
 
-![]()
+![](https://github.com/semperti-bootcamp/sre-bootcamp-localstack-marko-190820/blob/A1/imagenes/localstackweb.png)
 
