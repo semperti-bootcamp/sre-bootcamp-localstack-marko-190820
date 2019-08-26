@@ -1,0 +1,28 @@
+{
+    "Empleados": [
+        {
+            "PutRequest": {
+                "Item": {
+                    "Name": {"S":"Marko Aular"},
+                    "cargo": {"S":"SRE"}
+                }
+            }
+        },
+        
+        {
+            "PutRequest": {
+                "Item": {
+                    "Nombre": {"S":"Pedro Perez"},
+                    "Cargo": {"S":"RRHH"},
+
+             "PutRequest": {
+                "Item": {
+                    "Nombre": {"S":"Maria Maria"},
+                    "Cargo": {"S":"Finanzas"}
+                 }
+               }
+             }
+           }
+        }
+    ]
+}
